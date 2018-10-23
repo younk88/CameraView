@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    tools:context=".PreviewActivity">
+
+    <TextureView
+        android:id="@+id/preview"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:keepScreenOn="true"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:orientation="vertical"
+        android:layout_marginBottom="15dip"
+        android:layout_gravity="bottom">
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:orientation="horizontal"
+            android:layout_alignParentBottom="true" android:gravity="center_vertical">
+
+            <TextView android:layout_width="wrap_content" android:textColor="#FFF"
+                android:width="80dip"
+                android:layout_height="wrap_content" android:text="Hue" />
+
+            <SeekBar android:id="@+id/hueSeekBar"
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:progress="180" android:max="360" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:orientation="horizontal"
+            android:layout_alignParentBottom="true" android:gravity="center_vertical">
+
+            <TextView android:layout_width="wrap_content" android:textColor="#FFF"
+                android:width="80dip"
+                android:layout_height="wrap_content" android:text="Saturation" />
+
+            <SeekBar android:id="@+id/saturationSeekBar"
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:progress="100" android:max="200" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView android:layout_width="wrap_content" android:textColor="#FFF"
+                android:width="80dip"
+                android:layout_height="wrap_content" android:text="Brightness" />
+
+            <SeekBar android:id="@+id/brightnessSeekBar"
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:progress="127" android:max="255" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView android:layout_width="wrap_content" android:textColor="#FFF"
+                android:width="80dip"
+                android:layout_height="wrap_content" android:text="Contrast" />
+
+            <SeekBar android:id="@+id/contrastSeekBar"
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:progress="100" android:max="200" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
